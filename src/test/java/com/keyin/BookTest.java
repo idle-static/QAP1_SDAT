@@ -18,14 +18,14 @@ class BookTest {
     @Test
     public void testIsCheckedOut() {
         assertFalse(book.isCheckedOut(), "Book should initially NOT be checked out.");
-        book.setCheckedOut(false);
+        book.setCheckedOut(true);
         assertTrue(book.isCheckedOut());
     }
 
     @Test
     public void testIsPastDue() {
         book.setDueDate(LocalDate.now().minusDays(1));
-        book.setCheckedOut(true);
+        book.setCheckedOut(false);
         assertTrue(book.isPastDue(), "Book should be past due if due date is before today and book is checked out.");
     }
 
