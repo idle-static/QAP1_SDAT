@@ -25,7 +25,7 @@ class BookTest {
     @Test
     public void testIsPastDue() {
         book.setDueDate(LocalDate.now().minusDays(1));
-        book.setCheckedOut(false);
+        book.setCheckedOut(true);
         assertTrue(book.isPastDue(), "Book should be past due if due date is before today and book is checked out.");
     }
 
