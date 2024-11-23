@@ -18,7 +18,7 @@ class BookTest {
     @Test
     public void testIsCheckedOut() {
         assertFalse(book.isCheckedOut(), "Book should initially NOT be checked out.");
-        book.setCheckedOut(true);
+        book.setCheckedOut(false);
         assertTrue(book.isCheckedOut());
     }
 
